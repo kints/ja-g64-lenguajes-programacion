@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+
+.marcador {
+  font-family: "Electrolize", sans-serif;
+  color: red;
+  background-color: black;
+  font-size: 8rem;
+}
+
+.vs {
+  font-size: 4rem;
+}

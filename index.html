@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESPN Líder mundial en deportes - Los Ángeles Lakers VS Chicago Bulls</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="./assets/js/marcador.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./assets/css/estilos.css">
+</head>
+
+<body>
+  <header class="d-flex bd-secondary">
+    <img src="./assets/img/ESPN-Logo-1985-present.jpg" alt="" width="100uw">
+    <h1>Lo último en deportes</h1> <button onclick="ponerJugadores(1)">Llenar Equipo 1</button><button
+      onclick="ponerJugadores(2)">Llenar Equipo 2</button>
+  </header>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-4">
+        <h2><span id="equipo1nombre"></span></h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Nombre</th>
+              <th>Posición</th>
+              <th>Altura</th>
+              <th>Universidad</th>
+              <th>Anotó puntos</th>
+            </tr>
+          </thead>
+          <tbody id="lista-equipo1">
+
+          </tbody>
+        </table>
+      </div>
+      <div class="col-4">
+        <div class="row">
+          <div class="col-12 text-center"><span class="text-center vs">VS</span></div>
+        </div>
+        <div class="row">
+          <div class="col-6 text-center"><strong class="marcador" id="marcadorEquipo1"></strong></div>
+          <div class="col-6 text-center"><strong class="marcador" id="marcadorEquipo2"></strong></div>
+        </div>
+
+        <div class="row">
+          <div class="col-6">
+            <h3>Anotadores <span id="equipo1AnotadoresNombre"></span></h3>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>Nombre</th>
+                  <th>Puntos</th>
+                </tr>
+              </thead>
+              <tbody id="listaAnotadoresEquipo1">
+              </tbody>
+            </table>
+          </div>
+          <div class="col-6">
+            <h3>Anotadores <span id="equipo2AnotadoresNombre"></span></h3>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>Nombre</th>
+                  <th>Puntos</th>
+                </tr>
+              </thead>
+              <tbody id="listaAnotadoresEquipo2">
+
+              </tbody>
+            </table>
+          </div>
+          <div class="row">
+            <div class="col-12"><img src="./assets/img/bg-court.svg" alt=""></div>
+          </div>
+        </div>
+        <button onclick="ponerJugadores(1);">Ingresar equipo 1</button>
+        <button onclick="ponerJugadores(2);">Ingresar equipo 2</button>
+      </div>
+      <div class="col-4">
+        <h2><span id="equipo2nombre"></span></h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>No.</th>
+              <th>Nombre</th>
+              <th>Posición</th>
+              <th>Altura</th>
+              <th>Universidad</th>
+              <th>Anotó puntos</th>
+            </tr>
+          </thead>
+          <tbody id="lista-equipo2">
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
