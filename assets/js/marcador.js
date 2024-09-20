@@ -55,13 +55,32 @@ let marcadorEquipo2 = 0;
 function equipoMarco(noEquipo, puntos, jugador) {
   let htmlElementoMarcador = document.getElementById(
     (noEquipo === 1 ? "marcadorEquipo1" : "marcadorEquipo2"));
-
+  let jugadoresEquipo = noEquipo === 1 ? jugadoresEquipo1 : jugadoresEquipo2;
   if (noEquipo === 1) {
     marcadorEquipo1 += puntos;
   } else {
     marcadorEquipo2 += puntos;
   }
   htmlElementoMarcador.innerText = noEquipo === 1 ? "" + marcadorEquipo1 : "" + marcadorEquipo2;
+  let numeroPlayera = traerNumPlayera(jugadoresEquipo, jugador);
+  let jugadorAnotador = `<tr>
+  <td>${numeroPlayera != undefined ? numeroPlayera : '--'}</td>
+  <td>${jugador}</td>
+  <td>${puntos}</td>
+</tr >`;
+  let htmlElementoMarcadorAnotadores = document.getElementById(noEquipo === 1 ? "listaAnotadoresEquipo1" : "listaAnotadoresEquipo2");
+  htmlElementoMarcadorAnotadores.innerHTML = htmlElementoMarcadorAnotadores.innerHTML + jugadorAnotador;
+}
+
+function traerNumPlayera(arregloJugadores, jugador) {
+  let i = 0;
+  do {
+    if (arregloJugadores[i][0] === jugador) {
+      return arregloJugadores[i][1];
+    }
+    i++;
+  } while (i < arregloJugadores.length);
+  return undefined;
 }
 
 function ponerJugadores(noEquipo) {
